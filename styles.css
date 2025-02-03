@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    ;
+    line-height: 1.6;
+    background-color:#F0C17C;
+    color: black;
+    padding: 2em;
+   
+}
+
+#main-title {
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+    color: rgb(34, 34, 34);
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+main{
+    font-size: 1.5rem;
+    margin: 0;
+    text-align: center;
+}
+main > h3 {
+    font-family: cursive;
+    color: #60a575;
+    font-size: 1.3rem;
+    margin-top: 5px;
+    text-align: center;
+}
+
+p::first-letter {
+    font-style: italic;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: rgb(200, 50, 50);
+}
+ol li {
+    margin-bottom: 0.5em;
+}
+
+a:hover {
+    color: #7cabda;
+    text-decoration: underline;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 2em;
+}
+
+.highlight {
+    color: #df5938;
+    font-weight: bold;
+}
