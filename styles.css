@@ -1,3 +1,6 @@
+
+
+/*main textual changes*/
 body {
     font-family: Arial, sans-serif;
     ;
@@ -80,6 +83,10 @@ body {
     border: 1px solid #741f0a;
     border-radius: 5px;
 }
+
+
+
+/*Naviagtion Bar*/
 nav ul {
     list-style: none;
     padding: 20;
@@ -104,7 +111,7 @@ nav ul li a {
     display: block;
     margin: auto;
 }
-
+/*For mobile use*/
 @media screen and (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -120,7 +127,7 @@ nav ul li a {
     }
 }
 
-
+/*for even smaller screens*/
 @media screen and (max-width: 480px) {
     h1 {
         font-size: 1.5rem;
