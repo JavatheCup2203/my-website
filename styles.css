@@ -14,19 +14,27 @@ body {
     color: rgb(34, 34, 34);
     margin-bottom: 5px;
     text-align: center;
+    
 }
 
 main{
     font-size: 1.5rem;
     margin: 0;
     text-align: center;
+    padding: 1em;
 }
 main > h3 {
     font-family: cursive;
     color: #60a575;
     font-size: 1.3rem;
     margin-top: 5px;
+    padding-bottom: 5px;
     text-align: center;
+}
+
+p {
+    margin: 10px 0;
+    padding: 10px;
 }
 
 p::first-letter {
@@ -36,7 +44,7 @@ p::first-letter {
     color: rgb(200, 50, 50);
 }
 ol li {
-    margin-bottom: 0.5em;
+    margin-bottom: 0.5em;   
 }
 
 a:hover {
@@ -48,9 +56,81 @@ a:hover {
     width: 80%;
     margin: auto;
     padding: 2em;
+    border: 2px solid #741f0a;
+    border-radius: 8px;
+    background: #df5b4a;
 }
 
 .highlight {
     color: #df5938;
     font-weight: bold;
+}
+
+
+body {
+    background: linear-gradient(to bottom, #F0C17C, #df5b4a);
+    color: black;
+}
+
+
+.column {
+    
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #741f0a;
+    border-radius: 5px;
+}
+nav ul {
+    list-style: none;
+    padding: 20;
+     display: flex;
+    background-color: #941F4E;
+    
+}
+
+nav ul li {
+    padding: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white; 
+    font-size: 18px;
+}
+
+.scalable-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        padding: 5px;
+    }
+
+    body {
+        padding: 1em;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .scalable-img {
+        width: 80%;
+    }
 }
