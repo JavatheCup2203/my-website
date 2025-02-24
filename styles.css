@@ -1,143 +1,240 @@
+/*background on website */
+html {
+    background-color: #941F4E;
+}
 
-
-/*main textual changes*/
+/*body has a gradient background  */
 body {
     font-family: Arial, sans-serif;
-    ;
     line-height: 1.6;
-    background-color:#F0C17C;
     color: black;
     padding: 2em;
-   
+    background: linear-gradient(to bottom, #F0C17C, #df5b4a);
 }
 
-#main-title {
-    font-family: Arial, sans-serif;
-    font-size: 2rem;
-    color: rgb(34, 34, 34);
-    margin-bottom: 5px;
-    text-align: center;
-    
-}
-
-main{
-    font-size: 1.5rem;
-    margin: 0;
-    text-align: center;
-    padding: 1em;
-}
-main > h3 {
-    font-family: cursive;
-    color: #60a575;
-    font-size: 1.3rem;
-    margin-top: 5px;
-    padding-bottom: 5px;
-    text-align: center;
-}
-
-p {
-    margin: 10px 0;
+/*  grid set up, page links*/
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
     padding: 10px;
 }
 
-p::first-letter {
-    font-style: italic;
-    font-size: 1.5em;
-    font-weight: bold;
-    color: rgb(200, 50, 50);
-}
-ol li {
-    margin-bottom: 0.5em;   
+.grid-item {
+    background-color: #df5b4a;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
 }
 
+/* makes all main titles center */
+main {
+    text-align: center;
+}
+
+ol li {
+    margin-bottom: 0.5em;
+}
+
+/* For all the links */
 a:hover {
-    color: #7cabda;
+    color: #ffffff;
     text-decoration: underline;
 }
 
 .container {
-    width: 80%;
+    width: 100%;
     margin: auto;
     padding: 2em;
     border: 2px solid #741f0a;
     border-radius: 8px;
     background: #df5b4a;
+    max-width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+
 }
 
+/*represented on homepage */
 .highlight {
-    color: #df5938;
+    color: #941F4E;
     font-weight: bold;
 }
 
+/* This affects mainly home page image and the links images*/
+img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    height: auto;
 
-body {
-    background: linear-gradient(to bottom, #F0C17C, #df5b4a);
-    color: black;
 }
 
-
+/* represented on the art page */
 .column {
-    
+    flex: 1 1 300px;
+    margin: 10px;
     padding: 10px;
     background-color: white;
     border: 1px solid #741f0a;
     border-radius: 5px;
+    text-align: center;
 }
 
-
-
-/*Naviagtion Bar*/
-nav ul {
-    list-style: none;
-    padding: 20;
-     display: flex;
+/* navagationl system */
+.navbar {
     background-color: #941F4E;
-    
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
+
 }
 
-nav ul li {
-    padding: 10px;
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+
+    font-size: 2em;
 }
 
-nav ul li a {
+
+.navbar a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
-    color: white; 
-    font-size: 18px;
 }
 
-.scalable-img {
-    max-width: 100%;
+.navbar a:hover {
+    background-color: #ddd;
+    color: rgb(41, 40, 40);
+}
+
+/* The images in .columns are way bigger than the rest of the page content */
+.columns .scalable-img {
+    max-width: 40%;
     height: auto;
     display: block;
     margin: auto;
 }
-/*For mobile use*/
+
+/* want the font to be bigger to take up some space */
+#font {
+    font-size: 2rem;
+}
+
+/* making the image smaller */
+@media screen and (max-width: 1024px) {
+
+    .columns .scalable-img {
+        max-width: 30%;
+    }
+
+}
+
+/* making bigger for the in between size */
+@media screen and (max-width: 900px) {
+
+    .columns .scalable-img {
+        max-width: 40%;
+    }
+
+}
+
+/* continues to make it smaller */
 @media screen and (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav ul li {
-        padding: 5px;
-    }
-
-    body {
-        padding: 1em;
+    .columns .scalable-img {
+        max-width: 70%;
     }
 }
 
-/*for even smaller screens*/
-@media screen and (max-width: 480px) {
-    h1 {
+/*font (nav and headers) get bigger but p makes rest of font smaller*/
+
+@media screen and (max-width: 620px) {
+    body {
+        font-size: 2rem;
+    }
+
+    .columns .scalable-img {
+        max-width: 80%;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar a {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+}
+
+/* gave images more size font size goes smaller for readibility*/
+@media screen and (max-width: 520px) {
+    body {
         font-size: 1.5rem;
     }
 
     p {
-        font-size: 14px;
+        font-size: 1rem;
     }
 
-    .scalable-img {
-        width: 80%;
+    .columns .scalable-img {
+        max-width: 100%;
+    }
+
+    #font {
+        font-size: 1.5rem;
+    }
+}
+
+/* makes everything smaller so its easier to read*/
+@media screen and (max-width: 360px) {
+    body {
+        font-size: 2rem;
+    }
+
+    .navbar ul {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        margin: 0;
+        padding: 0;
+    }
+
+    ol li {
+        margin-bottom: 0.5em;
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    #font {
+        font-size: 1rem;
+    }
+
+    #why-frakter {
+        font-size: 1rem;
+    }
+
+    .grid-container {
+        font-size: 1rem;
+        max-width: 600%;
     }
 }
