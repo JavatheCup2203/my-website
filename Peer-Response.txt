@@ -1,0 +1,47 @@
+Hello Jordie! 
+I really appreciate how informative your website is! I actually didn't know most of the information on your website! 
+Another thing I like about your page is how color coordinated your pages are. I really like the warm color scheme!
+
+Some things I found that might help! 
+1. I would try moving the image on your main page down lower or make it to the float left of some of your text. 
+That way you can bring some more of the main content of the page a little higher up so there is less need to scroll.
+
+Edit:           added text wrapping and a left image class to allow teh image to sit in between the rest of the text
+
+2. On the art page, the background color of the box elements that your images are in, provide a good contrast that makes them stick out! 
+Although I would try to use a different color that matches a little better with your warm color scheme that is prevalent on the rest of the website.
+            
+ Edit:            I changed this to 941F4E to match with the backgroud 
+
+
+3. The last thing I would take a look into is your <h4>s on your art and history pages, I would look into making those a bit bigger. 
+Maybe with an <h2> tag instead, that way the title of the page sticks out to the user a lot more.
+
+Over all I really like your webpage! It is very informative and I love the color scheme you went with. 
+Especially the gradient that you use in the background!
+
+
+Reply from Korika Anders
+So already this is some of my jam. I really like Typefaces, even if I don't dig around in their history I am always on the lookout for a good typeface. 
+Some of my favorite parts of any design task is finding the right typeface for the job and I can spend hours trying out various ones to see if they fit the job.
+ We've got a gradient background which I love, I'm always down for things non-standard in modern web design and this color evokes a calm sunset and doesn't make the
+  text in front of it too difficult to read. The breakpoints on the website form fit to whatever screensize I'm using too! It's great
+
+ If I had any tips or suggestions, it would be to reduce the font size of the headers as the screen gets smaller (it's something I forgot to do as well!) and also, 
+ though it hasn't been taught quite yet, using the Fraktur typeface on your website! You can, using CSS, 
+ get the browser to use a typeface that is not standard installed on their computers :D 
+
+for instance, my website is based on the video game Skyrim so I looked up what primary fonts skyrim used in it's design and found Futura. 
+From there I put it in it's own special folder in my website, and then put this bit of code into my CSS:
+
+
+@font-face {
+
+    font-family: Futura;
+
+    src: url('../fonts/futura.otf');
+
+}
+
+with this, the browser will utilize that typeface on the website, all without them having to go download and install it themselves. 
+It's a really handy bit of code and I think your website would really benefit from utilizing this bit of css.

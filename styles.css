@@ -12,7 +12,37 @@ body {
     background: linear-gradient(to bottom, #F0C17C, #df5b4a);
 }
 
-/*  grid set up, page links*/
+main{
+    font-family: "UnifrakturMaguntia", cursive;
+    font-weight: 400;
+    font-style: normal;   
+    text-align: center;
+}
+
+ /* Moves the image to be around the words */
+.left-image {
+    float: left;
+    margin-right: 15px; 
+    width: 250px; 
+    height: auto; 
+}
+.right-list{
+    
+
+    width: 150px; /* Adjust to desired size */
+    height: auto;   
+
+}
+.right-image {
+    float: right;
+    margin-left: 15px; 
+    width: 250px; 
+    height: auto; 
+    max-width: 20%;
+}
+
+
+/* grid set up */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -24,13 +54,10 @@ body {
     background-color: #df5b4a;
     padding: 20px;
     text-align: center;
-    border: 1px solid #ddd;
+    border: 1px solid #ffffff;
 }
 
-/* makes all main titles center */
-main {
-    text-align: center;
-}
+
 
 ol li {
     margin-bottom: 0.5em;
@@ -46,7 +73,7 @@ a:hover {
     width: 100%;
     margin: auto;
     padding: 2em;
-    border: 2px solid #741f0a;
+    border: 2px solid #ffffff;
     border-radius: 8px;
     background: #df5b4a;
     max-width: 900px;
@@ -76,7 +103,7 @@ img {
     margin: 10px;
     padding: 10px;
     background-color: white;
-    border: 1px solid #741f0a;
+    border: 3px solid #941F4E;
     border-radius: 5px;
     text-align: center;
 }
@@ -85,10 +112,9 @@ img {
 .navbar {
     background-color: #941F4E;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
     padding: 10px 0;
-
+    justify-content: space-between;
 }
 
 .navbar ul {
@@ -96,8 +122,23 @@ img {
     padding: 0;
     margin: 0;
     display: flex;
-
     font-size: 2em;
+}
+.nav-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.home-button {
+    margin-right: auto;
+}
+.menu{
+    display:flex;
+    gap:20px;
+    margin-left: auto;
 }
 
 
@@ -122,17 +163,34 @@ img {
 }
 
 /* want the font to be bigger to take up some space */
-#font {
+.font {
     font-size: 2rem;
+}
+
+.header-font{
+    font-size: 3rem;
+}
+/* making the image smaller */
+@media screen and (max-width: 1920px) {
+
+  
+   .right-list{
+       
+    }  
+
 }
 
 /* making the image smaller */
 @media screen and (max-width: 1024px) {
 
+   .right-list{
+    float: right;
+    margin-left: 15px;
+    max-width: 50%;
+   }
     .columns .scalable-img {
         max-width: 30%;
     }
-
 }
 
 /* making bigger for the in between size */
@@ -155,28 +213,41 @@ img {
 
 @media screen and (max-width: 620px) {
     body {
-        font-size: 2rem;
+        font-size: 1rem;
     }
-
+main{
+    font-size: 2rem;
+}
     .columns .scalable-img {
         max-width: 80%;
     }
-
-    .navbar ul {
-        flex-direction: column;
+    .nav-container {
+        flex-direction: column; /* Stack items */
         align-items: center;
     }
-
-    .navbar a {
+    .menu {
+        flex-direction: column; /* Stack menu items */
         width: 100%;
         text-align: center;
-        padding: 10px;
+        margin-left: 0; /* Reset margin */
+    }
+
+    .home-button {
+        margin-right: 0; /* Reset margin */
+        margin-bottom: 10px;
     }
 
     .grid-container {
         grid-template-columns: repeat(1, 1fr);
     }
-
+    ol li {
+        margin-bottom: 1.5em;
+        font-size: 1.5rem;
+    }
+   
+    .highlight{
+        font-size: 2rem;
+    }
     p {
         font-size: 1.5rem;
     }
@@ -185,18 +256,22 @@ img {
 /* gave images more size font size goes smaller for readibility*/
 @media screen and (max-width: 520px) {
     body {
-        font-size: 1.5rem;
+        font-size: .5rem;
     }
+main{
+    font-size: 2rem;
+}
 
     p {
         font-size: 1rem;
     }
 
-    .columns .scalable-img {
-        max-width: 100%;
-    }
+ .navbar ul{
+font-size: 1.5rem;
+ }
 
-    #font {
+
+    .font {
         font-size: 1.5rem;
     }
 }
@@ -206,7 +281,9 @@ img {
     body {
         font-size: 2rem;
     }
-
+    main{
+        font-size: 1rem;
+    }
     .navbar ul {
         font-size: 1.5rem;
     }
@@ -224,14 +301,14 @@ img {
     p {
         font-size: 1.2rem;
     }
-
-    #font {
+.highlight{
+    font-size: 1rem;
+}
+    .font {
         font-size: 1rem;
     }
 
-    #why-frakter {
-        font-size: 1rem;
-    }
+    
 
     .grid-container {
         font-size: 1rem;
